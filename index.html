@@ -45,6 +45,11 @@
       width: 500px;
       height: 350px;
     }
+    #sobrenos{
+
+      align-items: center;
+      text-align: center;
+    }
 
     @media (min-width: 768px) {
       .carousel-inner img {
@@ -234,6 +239,28 @@
         width: 100%;
       }
     }
+    @media (max-width: 991px) {
+    .row {
+      display: flex;
+      align-items: center; 
+      justify-content: center; 
+    }
+
+    .col-12 {
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+    }
+
+    #sobrenos {
+      text-align: left;
+      margin-right: 20px; 
+    }
+
+    #imag {
+      margin-left: 20px;
+    }
+  }
   </style>
 </head>
 
@@ -269,7 +296,7 @@
       </div>
     </nav>
   </header>
-   
+
 
 
   <!-- inicio modal -->
@@ -669,7 +696,7 @@
 
         <h5 id="sobrenos">Em um ambiente cheio de computadores e códigos, um curso de informática foi o
 
-          <h5 style="margin-left: -200px;">Em um ambiente cheio de computadores e códigos, um curso de informática foi o
+          Em um ambiente cheio de computadores e códigos, um curso de informática foi o
 
             ponto de partida para a
             história de dois amigos que transformaram a amizade em um negócio promissor. O que começou como conversas
@@ -687,7 +714,7 @@
       </div>
       <div class="col-6">
         <img src="imagens/Imagem do WhatsApp de 2024-12-01 à(s) 15.06.25_256ab180.jpg" id="imag" alt=""
-          style="width:500px; height: 350px; margin-right: -220px; " alt="">
+          style="width:500px;  " alt="">
 
       </div>
     </div>
@@ -696,51 +723,43 @@
 
   <br><br>
 
-  <footer style="background-color: rgb(121, 124, 124);">
+ <footer style="background-color: rgb(121, 124, 124);">
     <br>
-
     <div class="container-fluid" style="background-color: rgb(0, 0, 0);">
       <div class="row align-items-center" style="background-color: rgb(0, 0, 0);">
-
-        <div class="container-fluid" style="background-color: rgb(92, 92, 92);">
-          <div class="row align-items-center" style="background-color: rgb(92, 92, 92);">
-
-            <!-- Coluna Siga-nos -->
-            <div class="col-4 text-start text-white">
-              <h5 class="text-white" id="contato">Siga-nos:</h5>
-              <p class="text-white">
-                <img
-                  src="https://d1muf25xaso8hp.cloudfront.net/https://img.criativodahora.com.br/2024/01/criativo-65946738a901dMDIvMDEvMjAyNCAxNmg0Mg==.jpg?w=1000&h=&auto=compress&dpr=1&fit=max"
-                  width="24" height="24"> Instagram: @Irmandadesports<br>
-                <img src="https://i.pinimg.com/736x/70/f9/36/70f936294a1f0f3949a9205df9340d5e.jpg" width="24"
-                  height="24">
-                Facebook: @Irmandadesports<br>
-
-                <img
-                  src="https://e7.pngegg.com/pngimages/551/579/png-clipart-whats-app-logo-whatsapp-logo-whatsapp-cdr-leaf-thumbnail.png"
-                  width="24" height="24"> Whatsapp: +55 (11)4002-8922<br>
-                <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" width="25" height="20"> Email:
-                Irmandadesports@gmail.com
-              </p>
-            </div>
-
-            <!-- Coluna Atendimento ao Cliente -->
-            <div class="col-4 text-center">
-              <h5 class="text-white">Atendimento ao Cliente</h5>
-              <p>
-                <a class="dropdown-item text-white" href="https://www.reclameaqui.com.br/" target="_blank">Reclame
-                  Aqui!</a>
-              </p>
-            </div>
-
-            <!-- Direitos Autorais -->
-            <div class="col-4 text-end">
-              <p class="text-white">
-                &copy; 2024 Ygor Matsumoto & Lucas Vicente. Todos os direitos reservados.
-              </p>
-            </div>
-          </div>
+        <!-- Coluna Siga-nos -->
+        <div class="col-4 text-start text-white">
+          <h5 class="text-white" id="contato">Siga-nos:</h5>
+          <p class="text-white">
+            <img
+              src="https://d1muf25xaso8hp.cloudfront.net/https://img.criativodahora.com.br/2024/01/criativo-65946738a901dMDIvMDEvMjAyNCAxNmg0Mg==.jpg?w=1000&h=&auto=compress&dpr=1&fit=max"
+              width="24" height="24"> Instagram: @Irmandadesports<br>
+            <img src="https://i.pinimg.com/736x/70/f9/36/70f936294a1f0f3949a9205df9340d5e.jpg" width="24" height="24">
+            Facebook: @Irmandadesports<br>
+            <img
+              src="https://e7.pngegg.com/pngimages/551/579/png-clipart-whats-app-logo-whatsapp-logo-whatsapp-cdr-leaf-thumbnail.png"
+              width="24" height="24"> Whatsapp: +55 (11)4002-8922<br>
+            <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" width="25" height="20"> Email:
+            Irmandadesports@gmail.com
+          </p>
         </div>
+
+        <!-- Coluna Atendimento ao Cliente -->
+        <div class="col-4 text-center">
+          <h5 class="text-white">Atendimento ao Cliente</h5>
+          <p>
+            <a class="dropdown-item text-white" href="https://www.reclameaqui.com.br/" target="_blank">Reclame Aqui!</a>
+          </p>
+        </div>
+
+        <!-- Direitos Autorais -->
+        <div class="col-4 text-end">
+          <p class="text-white">
+            &copy; 2024 Ygor Matsumoto & Lucas Vicente. Todos os direitos reservados.
+          </p>
+        </div>
+      </div>
+    </div>
   </footer>
 
 
@@ -779,4 +798,5 @@
 
 
 </html>
+
 

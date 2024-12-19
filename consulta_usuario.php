@@ -70,25 +70,38 @@ $cod = $_GET['id'];
   include_once('conexao.php');
   try 
   {    
-    $select = $conn->prepare("SELECT * FROM usuario and entrega where cd_u=$cod ");
-    $select->execute();
-    
-    while($row = $select->fetch()) 
-    {
-     
+    $select = $conn->prepare("SELECT 
+    e.tel_e, 
+    e.cep_e, 
+    e.formpag_e, 
+    u.nm_u, 
+    u.email_u, 
+    u.senha_u
+FROM 
+    entrega AS e
+INNER JOIN 
+    usuario AS u
+ON 
+    e.cd_u = u.cd_u
+WHERE 
+    e.cd_u = :cod");
 
-      echo "<p>";
-      //echo "<br><img src='".$row['imagem']."' width=80px>";
-      echo "<br><b>Codigo: </b>".$row['CODIGO'];
-      echo "<br><b>Nome: </b>".$row['NOME'];
-      echo "<br><b>CPF: </b>".$row['CPF'];
-      echo "<br><b>RG: </b>".$row['RG'];
-      echo "<br><b>CEP: </b>".$row['CEP'];
-      echo "<br><b>Numero: </b>".$row['NUMERO'];
-      echo "<br><b>Celular: </b>".$row['CELULAR'];
-      echo "<br><b>Email: </b>".$row['EMAIL'];
-      echo "<br><b>Hora Cadastrada: </b>".$row['HR_C'];
-      echo "<br>";
+// Substitui :cod pelo valor de $cod
+$select->bindParam(':cod', $cod, PDO::PARAM_INT);
+
+// Executa a consulta
+$select->execute();
+
+// Itera pelos resultados
+while ($row = $select->fetch(PDO::FETCH_ASSOC)) {
+    echo "Telefone: " . $row['tel_e'] . "<br>";
+    echo "CEP: " . $row['cep_e'] . "<br>";
+    echo "Forma de Pagamento: " . $row['formpag_e'] . "<br>";
+    echo "Nome: " . $row['nm_u'] . "<br>";
+    echo "Email: " . $row['email_u'] . "<br>";
+    echo "Senha: " . $row['senha_u'] . "<br><hr>";
+
+
 ?>
   <button onclick="window.location.href='alterarCliente.php?id=<?php echo $row['CODIGO'];?>'">
     Alterar
